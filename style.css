@@ -1,0 +1,83 @@
+/* Existing CSS - No changes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffe5e5;
+    padding: 20px; /* Prevents content from touching screen edges */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 500px;
+    margin: 20px;
+    width: 100%;
+}
+
+/* Image Responsive */
+.gif-img {
+    max-width: 100%;
+    width: 250px;
+    border-radius: 10px;
+}
+
+/* Button Container */
+.container .btn {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap; /* Ensures buttons wrap on small screens */
+    justify-content: center;
+}
+
+/* Button Styling */
+.btn a {
+    text-decoration: none;
+    color: #111;
+    background: #fff;
+    padding: 10px 25px;
+    border-radius: 8px;
+    box-shadow: 0.5rem 1rem 3rem rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-align: center;
+    min-width: 120px; /* Ensures button width consistency */
+}
+
+.btn a:hover {
+    background-color: #d4d4d4;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn a {
+        width: 100%; /* Full width buttons on mobile */
+        padding: 12px 0;
+    }
+
+    .gif-img {
+        width: 200px;
+    }
+}
